@@ -1,0 +1,150 @@
+/* ===== BODY with Animated Gradient Background ===== */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+
+    /* Animated Gradient */
+    background: linear-gradient(-45deg, #ff7e5f, #feb47b, #6a11cb, #2575fc);
+    background-size: 400% 400%;
+    animation: gradientMove 10s ease infinite;
+}
+
+/* Gradient Animation Keyframes */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ===== Transparent Content Box ===== */
+.content-box {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.contact-page{
+        background: linear-gradient(-45deg, #43cea2, #185a9d); /* Green-blue gradient */
+    background-size: 400% 400%;
+    animation: gradientMove 10s ease infinite;
+}
+/* ===== Name Heading Animation ===== */
+h1 {
+    font-size: 2.5rem;
+    color: #0077cc;
+    animation: slideIn 1s ease-out forwards;
+}
+
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateY(-30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Image Styling ===== */
+img {
+    border-radius: 50%;
+    border: 3px solid #0077cc;
+    margin-top: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover */
+}
+img:hover {
+    transform: scale(1.05); /* Thoda zoom */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* Shadow */
+}
+/* ===== Paragraph Styling ===== */
+p {
+    max-width: 500px;
+    margin: 20px auto;
+    line-height: 1.5;
+}
+
+/* ===== Hobbies List ===== */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: #0077cc;
+    color: white;
+    padding: 10px;
+    margin: 5px auto;
+    width: 200px;
+    border-radius: 8px;
+    animation: popIn 0.5s ease forwards;
+        transition: background 0.3s ease, transform 0.3s ease;
+}
+ul li:hover {
+    background: #005fa3; /* Darker blue */
+    transform: scale(1.05); /* Zoom */
+}
+@keyframes popIn {
+    0% { opacity: 0; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+/* ===== Contact Button ===== */
+a {
+    display: inline-block;
+    text-decoration: none;
+    background: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s;
+}
+
+a:hover {
+    background: #218838;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(40, 167, 69, 0.8); /* Green glow */
+
+}
+form {
+    display: flex;             /* Flexbox use karenge */
+    flex-direction: column;    /* Items ko top-to-bottom arrange karenge */
+    gap: 10px;                 /* Fields ke beech space */
+    max-width: 400px;          /* Form ki max width */
+    margin: auto;              /* Page ke center me lane ke liye */
+}
+input, textarea {
+    padding: 10px;           /* Andar space */
+    border: 2px solid #0077cc; /* Blue border */
+    border-radius: 8px;      /* Rounded corners */
+    font-size: 1rem;         /* Text size */
+} input:focus, textarea:focus {
+    border-color: #005fa3;                        /* Border thoda dark blue ho jaye */
+    box-shadow: 0 0 8px rgba(0, 119, 204, 0.5);   /* Soft blue glow */
+    outline: none;                                /* Default outline hataye */
+}
+/* Glass Effect Box */
+.glass-box {
+    background: rgba(255, 255, 255, 0.15); /* Transparent white */
+    backdrop-filter: blur(10px); /* Glass blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 500px;
+    margin: 40px auto;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+    text-align: center;
+    color: white;
+}
+
+/* Contact Page text color adjust */
+.home-page h1,
+.home-page p,
+.home-page a,
+.home-page li,
+.contact-page h1,
+.contact-page p,
+.contact-page a {
+    color: white;
+}
+
